@@ -11,8 +11,8 @@ your-repo/
 ## Steps
 
 ### 1. Get Notifications Ready (30 seconds)
-- **Phone**: Install ntfy app, subscribe to `jksr_notifications`
-- **Web**: Open https://ntfy.sh/jksr_notifications in a tab
+- **Phone**: Install ntfy app, subscribe to your chosen topic
+- **Web**: Open https://ntfy.sh/your-topic-name in a tab
 
 ### 2. Deploy (30 seconds)  
 1. Create GitHub repo
@@ -43,7 +43,7 @@ Check your phone/web for the test notification!
 
 Available environment variables you can set in GitHub:
 
-- `N8N_NTFY_TOPIC` - Custom ntfy topic (default: `jksr_notifications`)
+- `N8N_NTFY_TOPIC` - Custom ntfy topic (default: `n8n_releases`)
 - `N8N_DATA_DIR` - Data directory (default: `data`)  
 - `N8N_NO_NOTIFY` - Disable notifications (`true`/`false`)
 

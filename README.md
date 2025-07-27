@@ -17,8 +17,8 @@
 uv run n8n_monitor.py --test-notifications
 
 # 2. Subscribe to notifications (get the ntfy app or visit web)
-# iOS/Android: Search "ntfy" in app store, subscribe to "jksr-notification"  
-# Web: Visit https://ntfy.sh/jksr-notification
+# iOS/Android: Search "ntfy" in app store, subscribe to "your-topic-name"  
+# Web: Visit https://ntfy.sh/your-topic-name
 
 # 3. Test monitoring
 uv run n8n_monitor.py --monitor --no-notify
@@ -32,18 +32,17 @@ That's it! No webhooks, no API keys, no configuration files.
 
 ### Option 1: ntfy App (Recommended)
 1. Install ntfy app from [App Store](https://apps.apple.com/us/app/ntfy/id1625396347) or [Play Store](https://play.google.com/store/apps/details?id=io.heckel.ntfy)
-2. Subscribe to topic: `jksr-notification`
+2. Subscribe to your chosen topic name
 3. Done! You'll get push notifications instantly
 
 ### Option 2: Web Browser
-- Visit: https://ntfy.sh/jksr-notification
+- Visit: https://ntfy.sh/your-topic-name
 - Keep tab open to see notifications in real-time
 
-### Option 3: Custom Topic (Optional)
-Change the topic in the script:
-```python
-service = NotificationService(topic="your-custom-topic-name")
-```
+### Option 3: Configure Topic
+Set your topic via GitHub repository variables:
+- Go to Settings → Secrets and variables → Actions → Variables  
+- Add `N8N_NTFY_TOPIC` with your chosen topic name
 
 ## 📋 Example Notification
 

@@ -148,7 +148,7 @@ def format_notification(release, change_reason):
 
 def main():
     # Environment variable defaults
-    default_topic = os.getenv('N8N_NTFY_TOPIC', 'jksr_notifications')
+    default_topic = os.getenv('N8N_NTFY_TOPIC', 'n8n_releases')
     default_data_dir = os.getenv('N8N_DATA_DIR', 'data')
     env_no_notify = os.getenv('N8N_NO_NOTIFY', '').lower() in ('1', 'true', 'yes')
     
