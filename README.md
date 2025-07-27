@@ -109,8 +109,7 @@ uv run n8n_monitor.py
 
 ```
 data/
-├── latest_release.json    # Current release data
-└── release_history.json   # Last 50 releases
+└── latest.json    # Current release data for change detection
 ```
 
 ## ✨ Why ntfy is Perfect for This
