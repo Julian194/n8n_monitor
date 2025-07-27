@@ -11,15 +11,18 @@ your-repo/
 ## Steps
 
 ### 1. Get Notifications Ready (30 seconds)
-- **Phone**: Install ntfy app, subscribe to `jksr-notification`
-- **Web**: Open https://ntfy.sh/jksr-notification in a tab
+- **Phone**: Install ntfy app, subscribe to `jksr_notifications`
+- **Web**: Open https://ntfy.sh/jksr_notifications in a tab
 
 ### 2. Deploy (30 seconds)  
 1. Create GitHub repo
 2. Upload the 2 files above
-3. Done!
+3. **Optional**: Configure custom topic
+   - Go to Settings → Secrets and variables → Actions → Variables
+   - Add `N8N_NTFY_TOPIC` with your custom topic name
+4. Done!
 
-**No secrets. No configuration. No environment variables.**
+**No secrets. Minimal configuration via GitHub Variables.**
 
 ### 3. Test (Optional)
 ```bash
@@ -36,16 +39,15 @@ Check your phone/web for the test notification!
 - **Sends notifications** to your phone when new releases are found
 - **Commits data** to your repo for history tracking
 
-## Customize Topic (Optional)
+## Configure via GitHub Variables
 
-Don't want to share the `jksr-notification` topic? 
+Available environment variables you can set in GitHub:
 
-Edit line 36 in `n8n_monitor.py`:
-```python
-def __init__(self, topic: str = "your-unique-topic-name"):
-```
+- `N8N_NTFY_TOPIC` - Custom ntfy topic (default: `jksr_notifications`)
+- `N8N_DATA_DIR` - Data directory (default: `data`)  
+- `N8N_NO_NOTIFY` - Disable notifications (`true`/`false`)
 
-Then subscribe to your custom topic instead.
+Set these in: **Settings → Secrets and variables → Actions → Variables**
 
 ## That's It! 
 

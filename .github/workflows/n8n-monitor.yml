@@ -28,6 +28,11 @@ jobs:
         enable-cache: true
 
     - name: Run n8n release monitor
+      env:
+        # Configure via GitHub repository settings → Secrets and variables → Actions → Variables
+        N8N_NTFY_TOPIC: ${{ vars.N8N_NTFY_TOPIC || 'jksr_notifications' }}
+        N8N_DATA_DIR: ${{ vars.N8N_DATA_DIR || 'data' }}
+        N8N_NO_NOTIFY: ${{ vars.N8N_NO_NOTIFY || 'false' }}
       run: |
         uv run n8n_monitor.py --monitor
 

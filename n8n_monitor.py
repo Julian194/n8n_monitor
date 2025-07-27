@@ -8,7 +8,7 @@
 # ]
 # ///
 """
-n8n Release Monitor - Compact Edition
+n8n Release Monitor
 Ultra-minimal n8n release monitoring with ntfy notifications.
 
 Usage:
@@ -18,6 +18,7 @@ Usage:
 
 import argparse
 import json
+import os
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -146,14 +147,23 @@ def format_notification(release, change_reason):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='n8n Release Monitor - Compact Edition')
+    # Environment variable defaults
+    default_topic = os.getenv('N8N_NTFY_TOPIC', 'jksr_notifications')
+    default_data_dir = os.getenv('N8N_DATA_DIR', 'data')
+    env_no_notify = os.getenv('N8N_NO_NOTIFY', '').lower() in ('1', 'true', 'yes')
+    
+    parser = argparse.ArgumentParser(description='n8n Release Monitor')
     parser.add_argument('--monitor', action='store_true', help='Monitor mode with change detection')
     parser.add_argument('--test', action='store_true', help='Send test notification')
-    parser.add_argument('--no-notify', action='store_true', help='Disable notifications')
-    parser.add_argument('--topic', default='jksr_notifications', help='ntfy topic')
-    parser.add_argument('--data-dir', default='data', help='Data directory')
+    parser.add_argument('--no-notify', action='store_true', help='Disable notifications (env: N8N_NO_NOTIFY)')
+    parser.add_argument('--topic', default=default_topic, help=f'ntfy topic (env: N8N_NTFY_TOPIC, default: {default_topic})')
+    parser.add_argument('--data-dir', default=default_data_dir, help=f'Data directory (env: N8N_DATA_DIR, default: {default_data_dir})')
     
     args = parser.parse_args()
+    
+    # Apply environment variable for no-notify if not overridden by CLI
+    if env_no_notify and not args.no_notify:
+        args.no_notify = True
     
     # Test mode
     if args.test:
