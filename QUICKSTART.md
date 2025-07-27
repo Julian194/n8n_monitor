@@ -17,10 +17,13 @@ your-repo/
 ### 2. Deploy (30 seconds)  
 1. Create GitHub repo
 2. Upload the 2 files above
-3. **Optional**: Configure custom topic
+3. **Enable Actions** (if not already enabled)
+   - Go to Settings → Actions → General
+   - Ensure "Allow all actions and reusable workflows" is selected
+4. **Optional**: Configure custom topic
    - Go to Settings → Secrets and variables → Actions → Variables
    - Add `N8N_NTFY_TOPIC` with your custom topic name
-4. Done!
+5. Done!
 
 **No secrets. Minimal configuration via GitHub Variables.**
 

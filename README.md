@@ -160,3 +160,18 @@ Edit the `cron` line in `.github/workflows/n8n-monitor.yml`:
 - **Learning UV** - Great example of single-file scripts with dependencies
 
 **Simple. Effective. Free. 🎯**
+
+## 🔧 Troubleshooting
+
+**GitHub Actions failing with permission errors?**
+- The workflow includes `permissions: contents: write` to allow commits
+- Ensure Actions are enabled: Settings → Actions → General → "Allow all actions"
+
+**Not receiving notifications?**
+- Check that you're subscribed to the correct ntfy topic
+- Verify `N8N_NTFY_TOPIC` is set correctly in GitHub Variables
+- Test locally: `uv run n8n_monitor.py --test`
+
+**Want to see what's happening?**
+- Check the Actions tab in your GitHub repository
+- Manual trigger: Actions → "n8n Release Monitor" → "Run workflow"
