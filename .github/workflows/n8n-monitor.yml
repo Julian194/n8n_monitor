@@ -24,8 +24,6 @@ jobs:
 
     - name: Install UV
       uses: astral-sh/setup-uv@v3
-      with:
-        enable-cache: true
 
     - name: Run n8n release monitor
       env:
@@ -38,12 +36,17 @@ jobs:
 
     - name: Check for changes in data files
       id: git-check
+      env:
+        N8N_DATA_DIR: ${{ vars.N8N_DATA_DIR || 'data' }}
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "n8n Release Monitor"
         
+        # Add any new files in the data directory
+        git add "${N8N_DATA_DIR}/" || true
+        
         # Check if there are any changes to commit
-        if git diff --quiet && git diff --staged --quiet; then
+        if git diff --cached --quiet; then
           echo "No changes to commit"
           echo "changes=false" >> $GITHUB_OUTPUT
         else
@@ -54,14 +57,15 @@ jobs:
     - name: Commit and push changes
       if: steps.git-check.outputs.changes == 'true'
       run: |
-        git add data/
         git commit -m "📦 Update n8n release data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
         git push
 
     - name: Upload artifacts (optional)
       if: always()
+      env:
+        N8N_DATA_DIR: ${{ vars.N8N_DATA_DIR || 'data' }}
       uses: actions/upload-artifact@v4
       with:
         name: n8n-release-data
-        path: data/
+        path: ${{ vars.N8N_DATA_DIR || 'data' }}/
         retention-days: 30
