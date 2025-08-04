@@ -127,20 +127,20 @@ def format_notification(release, change_reason):
             date_info = f"\n📅 {item.split('Release date:')[-1].strip()}"
             break
     
-    # Get highlights (first 2 non-date items)
-    highlights = []
-    for item in content[:4]:
-        if item and "Release date:" not in item and len(item.strip()) > 10:
-            clean_item = item.replace('\n', ' ').strip()
-            if len(clean_item) > 80:
-                clean_item = clean_item[:77] + "..."
-            highlights.append(f"• {clean_item}")
-            if len(highlights) >= 2:
-                break
-    
+    # Build full release notes
     message = f"🎉 New n8n Release: {version}{date_info}\n"
-    if highlights:
-        message += f"\n🔍 Highlights:\n" + "\n".join(highlights) + "\n"
+    message += f"\n📋 Full Release Notes:\n"
+    message += "-" * 40 + "\n"
+    
+    # Include all content items (full release notes)
+    for item in content:
+        if item.strip():
+            # Don't repeat the release date if already shown
+            if "Release date:" not in item or not date_info:
+                clean_item = item.replace('\n', ' ').strip()
+                message += f"{clean_item}\n"
+    
+    message += "-" * 40 + "\n"
     message += f"\n🔗 https://docs.n8n.io/release-notes\n⏰ {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}"
     
     return message
