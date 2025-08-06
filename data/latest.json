@@ -1,12 +1,10 @@
 {
-  "version": "n8n@1.106.0",
+  "version": "n8n@1.105.3",
   "content": [
-    "View the commits for this version.\nRelease date: 2025-08-04",
-    "Next version\nThis is the next version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the forum.",
-    "This release contains performance improvements, core updates, editor improvements, node updates, a new node, and bug fixes.",
-    "Contributors#",
-    "baruchiro\nkillthekitten\nbaileympearson\nYingrjimsch\njoshualipman123",
+    "View the commits for this version.\nRelease date: 2025-08-05",
+    "Latest version\nThis is the latest version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the forum.",
+    "This release contains bug fixes.",
     "For full release details, refer to Releases on GitHub."
   ],
-  "scraped_at": "2025-08-05T09:06:37.006868"
+  "scraped_at": "2025-08-06T09:06:54.308474"
 }
