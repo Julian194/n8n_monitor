@@ -1,10 +1,10 @@
 {
-  "version": "n8n@1.105.3",
+  "version": "n8n@1.106.1",
   "content": [
-    "View the commits for this version.\nRelease date: 2025-08-05",
-    "Latest version\nThis is the latest version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the forum.",
+    "View the commits for this version.\nRelease date: 2025-08-07",
+    "Next version\nThis is the next version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the forum.",
     "This release contains bug fixes.",
     "For full release details, refer to Releases on GitHub."
   ],
-  "scraped_at": "2025-08-06T09:06:54.308474"
+  "scraped_at": "2025-08-08T09:06:25.422777"
 }
