@@ -2,8 +2,9 @@
   "version": "n8n@1.107.3",
   "content": [
     "View the commits for this version.\nRelease date: 2025-08-18",
+    "Latest version\nThis is the latest version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the forum.",
     "This release contains bug fixes.",
     "For full release details, refer to Releases on GitHub."
   ],
-  "scraped_at": "2025-08-19T09:03:38.536919"
+  "scraped_at": "2025-08-20T09:03:46.354153"
 }
