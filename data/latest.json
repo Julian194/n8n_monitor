@@ -1,10 +1,11 @@
 {
-  "version": "n8n@1.107.4",
+  "version": "n8n@1.109.0",
   "content": [
-    "View the commits for this version.\nRelease date: 2025-08-20",
-    "Latest version\nThis is the latest version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the forum.",
-    "This release contains a bug fix.",
+    "View the commits for this version.\nRelease date: 2025-08-25",
+    "This release contains core updates, editor improvements, node updates, performance improvements, and bug fixes.",
+    "Contributors#",
+    "naXa777\nprettycode2022\noppai",
     "For full release details, refer to Releases on GitHub."
   ],
-  "scraped_at": "2025-08-23T09:02:55.005661"
+  "scraped_at": "2025-08-26T09:03:59.744823"
 }
