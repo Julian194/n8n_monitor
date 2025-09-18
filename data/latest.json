@@ -1,12 +1,9 @@
 {
-  "version": "n8n@1.112.0",
+  "version": "n8n@1.112.1",
   "content": [
-    "View the commits for this version.\nRelease date: 2025-09-15",
-    "Next version\nThis is the next version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the forum.",
-    "This release contains API improvements, core updates, editor improvements, node updates, and bug fixes.",
-    "Contributors#",
-    "GuraaseesSingh\njabbson\nongdisheng",
+    "View the commits for this version.\nRelease date: 2025-09-17",
+    "This release contains bug fixes.",
     "For full release details, refer to Releases on GitHub."
   ],
-  "scraped_at": "2025-09-16T09:04:04.912312"
+  "scraped_at": "2025-09-18T09:03:47.763746"
 }
