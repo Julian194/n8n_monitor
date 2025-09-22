@@ -1,9 +1,9 @@
 {
-  "version": "n8n@1.112.1",
+  "version": "n8n@1.112.3",
   "content": [
-    "View the commits for this version.\nRelease date: 2025-09-17",
-    "This release contains bug fixes.",
+    "View the commits for this version.\nRelease date: 2025-09-19",
+    "This release contains a bug fix.",
     "For full release details, refer to Releases on GitHub."
   ],
-  "scraped_at": "2025-09-18T09:03:47.763746"
+  "scraped_at": "2025-09-22T09:04:13.582529"
 }
