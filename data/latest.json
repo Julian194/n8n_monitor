@@ -2,8 +2,10 @@
   "version": "n8n@1.113.2",
   "content": [
     "View the commits for this version.\nRelease date: 2025-09-24",
+    "Next version\nThis is the next version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the forum.",
     "This release contains bug fixes.",
-    "For full release details, refer to Releases on GitHub."
+    "For full release details, refer to Releases on GitHub.",
+    "Python task runner#\nThis version introduces the Python task runner as a beta feature. This feature secures n8n's Python sandbox and enables users to run real Python modules in n8n workflows. The original Pyodide-based implementation will be phased out. \nThis is a breaking change that replaces Pyodide - see here for a list of differences. Any Code node set to the legacy python parameter will need to be manually updated to use the new pythonNative parameter. Any Code node script set to python and relying on Pyodide syntax is likely to need to be manually adjusted to account for breaking changes.\n\nFor self-hosting users, see here for deployment instructions for task runners going forward and how to install extra dependencies.\nOn n8n Cloud, this will be a gradual transition. If in your n8n Cloud instance the Code node offers an option named \"Python (Native) (Beta)\", then your instance has been transitioned to native Python and you will need to look out for any breaking changes. Imports are disabled for security reasons at this time.\n\nThe native Python runner is currently in beta and is subject to change as we find a balance between security and usability. Your feedback is welcome."
   ],
-  "scraped_at": "2025-09-25T09:03:53.173640"
+  "scraped_at": "2025-09-26T09:03:51.610381"
 }
