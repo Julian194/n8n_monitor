@@ -1,9 +1,12 @@
 {
-  "version": "n8n@1.113.3",
+  "version": "n8n@1.114.0",
   "content": [
-    "View the commits for this version.\nRelease date: 2025-09-26",
-    "This release contains a bug fix.",
+    "View the commits for this version.\nRelease date: 2025-09-29",
+    "Next version\nThis is the next version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the forum.",
+    "This release contains core updates, editor improvements, project updates, performance improvements, and bug fixes.",
+    "Contributors#",
+    "nealzhu3",
     "For full release details, refer to Releases on GitHub."
   ],
-  "scraped_at": "2025-09-27T09:03:29.471353"
+  "scraped_at": "2025-09-30T09:04:03.184614"
 }
