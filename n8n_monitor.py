@@ -3,8 +3,6 @@
 # requires-python = ">=3.8"
 # dependencies = [
 #     "requests>=2.31.0",
-#     "beautifulsoup4>=4.12.0", 
-#     "lxml>=4.9.0",
 # ]
 # ///
 """
@@ -24,7 +22,6 @@ from datetime import datetime
 from pathlib import Path
 
 import requests
-from bs4 import BeautifulSoup
 
 
 def send_ntfy(topic, message, title="", priority=3, tags=""):
@@ -38,42 +35,42 @@ def send_ntfy(topic, message, title="", priority=3, tags=""):
 
 
 def fetch_releases(limit=1):
-    """Fetch n8n releases from docs"""
+    """Fetch n8n releases from GitHub API"""
     try:
-        response = requests.get("https://docs.n8n.io/release-notes", timeout=30)
+        response = requests.get(
+            f"https://api.github.com/repos/n8n-io/n8n/releases?per_page={limit}",
+            timeout=30
+        )
         response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
-        
-        # Find version headers
-        headers = [h for h in soup.find_all('h2') if h.get_text() and 'n8n@' in h.get_text()]
-        if not headers:
+        github_releases = response.json()
+
+        if not github_releases:
             return []
-        
+
         releases = []
-        for i, header in enumerate(headers[:limit]):
-            version = header.get_text().strip().replace('#', '')
-            
-            # Get content until next version header
+        for release in github_releases:
+            version = release.get('tag_name', 'Unknown')
+            body = release.get('body', '')
+            published_at = release.get('published_at', '')
+
+            # Parse release notes into lines
             content = []
-            current = header.next_sibling
-            next_header = headers[i + 1] if i + 1 < len(headers) else None
-            
-            while current and current != next_header:
-                if hasattr(current, 'get_text'):
-                    text = current.get_text().strip()
-                    if text and 'n8n@' not in text:
-                        if current.name in ['ul', 'ol']:
-                            content.extend(f"• {li.get_text().strip()}" for li in current.find_all('li'))
-                        else:
-                            content.append(text)
-                current = current.next_sibling
-            
+            if published_at:
+                content.append(f"Release date: {published_at.split('T')[0]}")
+
+            # Split body into lines and clean up
+            for line in body.split('\n'):
+                line = line.strip()
+                if line and not line.startswith('<!--'):
+                    content.append(line)
+
             releases.append({
                 'version': version,
                 'content': content,
-                'scraped_at': datetime.now().isoformat()
+                'scraped_at': datetime.now().isoformat(),
+                'html_url': release.get('html_url', '')
             })
-        
+
         return releases
     except Exception as e:
         print(f"❌ Failed to fetch releases: {e}")
@@ -141,8 +138,11 @@ def format_notification(release, change_reason):
                 message += f"{clean_item}\n"
     
     message += "-" * 40 + "\n"
-    message += f"\n🔗 https://docs.n8n.io/release-notes\n⏰ {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}"
-    
+
+    # Add GitHub URL if available
+    github_url = release.get('html_url', 'https://github.com/n8n-io/n8n/releases')
+    message += f"\n🔗 {github_url}\n⏰ {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}"
+
     return message
 
 

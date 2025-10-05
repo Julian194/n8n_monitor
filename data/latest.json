@@ -1,12 +1,12 @@
 {
-  "version": "n8n@1.114.0",
+  "version": "n8n@1.114.2",
   "content": [
-    "View the commits for this version.\nRelease date: 2025-09-29",
-    "Next version\nThis is the next version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the forum.",
-    "This release contains core updates, editor improvements, project updates, performance improvements, and bug fixes.",
-    "Contributors#",
-    "nealzhu3",
-    "For full release details, refer to Releases on GitHub."
+    "Release date: 2025-10-02",
+    "## [1.114.2](https://github.com/n8n-io/n8n/compare/n8n@1.114.1...n8n@1.114.2) (2025-10-02)",
+    "### Bug Fixes",
+    "* **core:** Check all outputs for chat triggers, first output only for webhooks ([#20308](https://github.com/n8n-io/n8n/issues/20308)) ([067e133](https://github.com/n8n-io/n8n/commit/067e13365fd8f4f73b9f7ac8d17a3241008710ee))",
+    "* **core:** Fix paired item data retrieval in loops with IF nodes ([#20309](https://github.com/n8n-io/n8n/issues/20309)) ([8c41278](https://github.com/n8n-io/n8n/commit/8c412781a036718e9614a81144dad271f23dd4c6))"
   ],
-  "scraped_at": "2025-09-30T09:04:03.184614"
+  "scraped_at": "2025-10-05T12:25:41.224155",
+  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.114.2"
 }
