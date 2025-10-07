@@ -1,12 +1,10 @@
 {
-  "version": "n8n@1.114.2",
+  "version": "n8n@1.114.3",
   "content": [
-    "Release date: 2025-10-02",
-    "## [1.114.2](https://github.com/n8n-io/n8n/compare/n8n@1.114.1...n8n@1.114.2) (2025-10-02)",
-    "### Bug Fixes",
-    "* **core:** Check all outputs for chat triggers, first output only for webhooks ([#20308](https://github.com/n8n-io/n8n/issues/20308)) ([067e133](https://github.com/n8n-io/n8n/commit/067e13365fd8f4f73b9f7ac8d17a3241008710ee))",
-    "* **core:** Fix paired item data retrieval in loops with IF nodes ([#20309](https://github.com/n8n-io/n8n/issues/20309)) ([8c41278](https://github.com/n8n-io/n8n/commit/8c412781a036718e9614a81144dad271f23dd4c6))"
+    "Release date: 2025-10-06",
+    "## [1.114.3](https://github.com/n8n-io/n8n/compare/n8n@1.114.2...n8n@1.114.3) (2025-10-06)",
+    "Internal fixes"
   ],
-  "scraped_at": "2025-10-05T12:25:41.224155",
-  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.114.2"
+  "scraped_at": "2025-10-07T09:03:54.831483",
+  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.114.3"
 }
