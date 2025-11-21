@@ -1,23 +1,24 @@
 {
-  "version": "n8n@1.120.4",
+  "version": "n8n@1.121.2",
   "content": [
-    "Release date: 2025-11-19",
-    "## [1.120.4](https://github.com/n8n-io/n8n/compare/n8n@1.120.3...n8n@1.120.4) (2025-11-19)",
+    "Release date: 2025-11-20",
+    "## [1.121.2](https://github.com/n8n-io/n8n/compare/n8n@1.121.1...n8n@1.121.2) (2025-11-20)",
+    "### Bug Fixes",
+    "* **core:** Fix mcp access scope issue ([#22031](https://github.com/n8n-io/n8n/issues/22031)) ([6335c88](https://github.com/n8n-io/n8n/commit/6335c885904aa093d7cf828482ef0a3dde7ba81e))",
+    "* **editor:** Notice background colors ([#22044](https://github.com/n8n-io/n8n/issues/22044)) ([610594e](https://github.com/n8n-io/n8n/commit/610594ea36a7ecbe7344f5d4b12654245ba2db71))",
     "---",
     "> [!NOTE]",
-    "> Prepare release 1.120.4 by updating versions across the monorepo and adding the changelog entry.",
+    "> Publish 1.121.2 with core and editor bug fixes; bump package versions across the monorepo.",
     ">",
-    "> - **Release prep**",
-    ">   - Add `CHANGELOG.md` entry for `1.120.4`.",
-    ">   - Bump versions across packages:",
-    ">     - Root `package.json`, `packages/cli`, `packages/core`, `packages/nodes-base`, `packages/workflow`.",
-    ">     - Backend libs: `@n8n/backend-common`, `@n8n/backend-test-utils`, `@n8n/db`, `@n8n/decorators`, `@n8n/api-types`, `@n8n/task-runner`.",
-    ">     - AI/LLM: `@n8n/n8n-nodes-langchain`, `@n8n/ai-workflow-builder`.",
-    ">     - Frontend: `@n8n/i18n`, `@n8n/rest-api-client`, `@n8n/stores`, `n8n-editor-ui`.",
-    ">     - Tooling: `n8n-node-dev`.",
+    "> - **Release**: `1.121.2`",
+    ">   - **Changelog — Bug Fixes**:",
+    ">     - `core`: Fix mcp access scope issue",
+    ">     - `editor`: Adjust notice background colors",
+    ">   - **Version bumps**:",
+    ">     - Root `package.json`, `packages/cli`, `packages/frontend/editor-ui`, `packages/frontend/@n8n/chat`, `packages/frontend/@n8n/design-system`, `packages/@n8n/backend-test-utils`, `packages/@n8n/db`",
     ">",
-    "> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit 59de68c78f2d016d273b9ff810ae47a702d389b6. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>"
+    "> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit c366cb2e12a8df500ff78ac9db6a1e91a85a4637. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>"
   ],
-  "scraped_at": "2025-11-20T09:03:51.742507",
-  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.120.4"
+  "scraped_at": "2025-11-21T09:03:57.838417",
+  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.121.2"
 }
