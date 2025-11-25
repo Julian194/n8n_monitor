@@ -1,24 +1,9 @@
 {
-  "version": "n8n@1.121.2",
+  "version": "n8n@1.122.1",
   "content": [
-    "Release date: 2025-11-20",
-    "## [1.121.2](https://github.com/n8n-io/n8n/compare/n8n@1.121.1...n8n@1.121.2) (2025-11-20)",
-    "### Bug Fixes",
-    "* **core:** Fix mcp access scope issue ([#22031](https://github.com/n8n-io/n8n/issues/22031)) ([6335c88](https://github.com/n8n-io/n8n/commit/6335c885904aa093d7cf828482ef0a3dde7ba81e))",
-    "* **editor:** Notice background colors ([#22044](https://github.com/n8n-io/n8n/issues/22044)) ([610594e](https://github.com/n8n-io/n8n/commit/610594ea36a7ecbe7344f5d4b12654245ba2db71))",
-    "---",
-    "> [!NOTE]",
-    "> Publish 1.121.2 with core and editor bug fixes; bump package versions across the monorepo.",
-    ">",
-    "> - **Release**: `1.121.2`",
-    ">   - **Changelog — Bug Fixes**:",
-    ">     - `core`: Fix mcp access scope issue",
-    ">     - `editor`: Adjust notice background colors",
-    ">   - **Version bumps**:",
-    ">     - Root `package.json`, `packages/cli`, `packages/frontend/editor-ui`, `packages/frontend/@n8n/chat`, `packages/frontend/@n8n/design-system`, `packages/@n8n/backend-test-utils`, `packages/@n8n/db`",
-    ">",
-    "> <sup>Written by [Cursor Bugbot](https://cursor.com/dashboard?tab=bugbot) for commit c366cb2e12a8df500ff78ac9db6a1e91a85a4637. This will update automatically on new commits. Configure [here](https://cursor.com/dashboard?tab=bugbot).</sup>"
+    "Release date: 2025-11-24",
+    "No changelog generated. Likely points to fixes in our CI."
   ],
-  "scraped_at": "2025-11-21T09:03:57.838417",
-  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.121.2"
+  "scraped_at": "2025-11-25T09:04:44.034873",
+  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.122.1"
 }
