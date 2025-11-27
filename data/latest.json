@@ -1,12 +1,12 @@
 {
-  "version": "n8n@1.122.2",
+  "version": "n8n@1.121.3",
   "content": [
-    "Release date: 2025-11-25",
-    "## [1.122.2](https://github.com/n8n-io/n8n/compare/n8n@1.122.1...n8n@1.122.1) (2025-11-25)",
+    "Release date: 2025-11-26",
+    "## [1.121.3](https://github.com/n8n-io/n8n/compare/n8n@1.121.2...n8n@1.121.3) (2025-11-26)",
     "### Bug Fixes",
-    "* **editor:** Fix issue for blinking/jumping UI when switching projects ([#22256](https://github.com/n8n-io/n8n/issues/22256)) ([ad2963c](https://github.com/n8n-io/n8n/commit/ad2963c75cfced0f74f22afc84797cf8c438972f))",
-    "* **editor:** Missing duplicate workflow action on workflow list ([#22230](https://github.com/n8n-io/n8n/issues/22230)) ([f811511](https://github.com/n8n-io/n8n/commit/f811511d933cc07385e8e20439e7ad02c01264ab))"
+    "* **core:** Add missing workflowId when creating base subworkflowworkflow additional data ([#22312](https://github.com/n8n-io/n8n/issues/22312)) ([fcc2139](https://github.com/n8n-io/n8n/commit/fcc21394c6693cca50012e260b5d2778081b4325))",
+    "* **Git Node:** Throw an error if the repository path is blocked ([#22253](https://github.com/n8n-io/n8n/issues/22253)) ([f4b009d](https://github.com/n8n-io/n8n/commit/f4b009d00d1f4ba9359b8e8f1c071e3d910a55f6))"
   ],
-  "scraped_at": "2025-11-26T09:04:08.294399",
-  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.122.2"
+  "scraped_at": "2025-11-27T09:03:51.635085",
+  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.121.3"
 }
