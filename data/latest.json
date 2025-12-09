@@ -1,16 +1,13 @@
 {
-  "version": "n8n@2.0.0-rc.4",
+  "version": "n8n@1.123.4",
   "content": [
-    "Release date: 2025-12-05",
-    "# [2.0.0-rc.4](https://github.com/n8n-io/n8n/compare/n8n@2.0.0-rc.3...n8n@2.0.0-rc.4) (2025-12-05)",
+    "Release date: 2025-12-08",
+    "## [1.123.4](https://github.com/n8n-io/n8n/compare/n8n@1.123.3...n8n@1.123.4) (2025-12-08)",
     "### Bug Fixes",
-    "* **core:** Do not prevent credential save if property has default value ([#22720](https://github.com/n8n-io/n8n/issues/22720)) ([03744c3](https://github.com/n8n-io/n8n/commit/03744c30c59b96a8ad67d8d6b321e0f7ff0571e2))",
-    "* **editor:** Bind color-scheme to app theme setting ([#22774](https://github.com/n8n-io/n8n/issues/22774)) ([3d46b97](https://github.com/n8n-io/n8n/commit/3d46b97bdf1c01852998ce5a5eb4631fe990d268))",
-    "* **editor:** Design tweaks for publish modals ([#22694](https://github.com/n8n-io/n8n/issues/22694)) ([98efa19](https://github.com/n8n-io/n8n/commit/98efa19ca4d9cf17c88a3778c00fea45caa54738))",
-    "* Security patches ([#22748](https://github.com/n8n-io/n8n/issues/22748)) ([d22c173](https://github.com/n8n-io/n8n/commit/d22c173aec9f990f1912450399eea29893e62d24))",
-    "### ⚠️ BREAKING CHANGES",
-    "* **core** Allow the activation of workflows with the errorTrigger and the executionWorkflowTrigger trigger ([#22019](https://github.com/n8n-io/n8n/pull/22019)) ([f636616](https://github.com/n8n-io/n8n/commit/ca8494af95353a175ad8d4b3afecd7a2cd8e8c76))"
+    "* **core:** Allowlist `HOME` env var in JS runner config ([#22839](https://github.com/n8n-io/n8n/issues/22839)) ([79ee577](https://github.com/n8n-io/n8n/commit/79ee577659ee05a466dceafa6414e3b5a01b322e))",
+    "### Refactors",
+    "* **core**: Make Sentry init non-fatal for JS runner ([#22800](https://github.com/n8n-io/n8n/pull/22800)) ([08729](https://github.com/n8n-io/n8n/commit/08729ce6c6fa26b0ba34bbe8f2c4cf04fd9c5486))"
   ],
-  "scraped_at": "2025-12-06T09:03:26.809672",
-  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.0.0-rc.4"
+  "scraped_at": "2025-12-09T09:05:07.395744",
+  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.4"
 }
