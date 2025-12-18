@@ -1,11 +1,12 @@
 {
-  "version": "n8n@1.123.6-exp.0",
+  "version": "n8n@2.0.3",
   "content": [
-    "Release date: 2025-12-16",
-    "## [1.123.6-exp.0](https://github.com/n8n-io/n8n/compare/n8n@1.123.6...n8n@1.123.6-exp.0) (2025-12-16)",
+    "Release date: 2025-12-17",
+    "## [2.0.3](https://github.com/n8n-io/n8n/compare/n8n@2.0.2...n8n@2.0.3) (2025-12-17)",
     "### Bug Fixes",
-    "* **ai-builder:** Updating stream recursion limit and removing tool node static parameter validation ([#23023](https://github.com/n8n-io/n8n/issues/23023)) ([5da8443](https://github.com/n8n-io/n8n/commit/5da844341b703b41e100f98b299f8212dd88cbbc))"
+    "* **core:** Error running evaluations in queue mode ([#23248](https://github.com/n8n-io/n8n/issues/23248)) ([326fe66](https://github.com/n8n-io/n8n/commit/326fe6602b351610dd595b8ff7d1d62d65bd3cae))",
+    "* Only support specified git config keys in Git node ([#23264](https://github.com/n8n-io/n8n/issues/23264)) ([19f42eb](https://github.com/n8n-io/n8n/commit/19f42ebe3f262fd0fd138a57b20363b2138f4514))"
   ],
-  "scraped_at": "2025-12-17T09:06:33.104356",
-  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.6-exp.0"
+  "scraped_at": "2025-12-18T09:06:19.439672",
+  "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.0.3"
 }
